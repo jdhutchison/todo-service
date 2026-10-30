@@ -22,10 +22,12 @@ dependencies {
   implementation("org.jetbrains.kotlin:kotlin-stdlib")
   implementation("io.quarkus:quarkus-arc")
   implementation("io.quarkus:quarkus-config-yaml")
+  implementation("io.quarkus:quarkus-logging-json")
   implementation("io.quarkus:quarkus-rest")
   implementation("io.quarkus:quarkus-rest-jackson")
   implementation("io.quarkus:quarkus-smallrye-health")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+  implementation("io.quarkiverse.logging.logback:quarkus-logging-logback")
 
   testImplementation("io.quarkus:quarkus-junit5")
   testImplementation("io.rest-assured:rest-assured")

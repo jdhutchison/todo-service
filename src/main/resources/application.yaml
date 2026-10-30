@@ -1,6 +1,7 @@
 quarkus:
   application:
     name: todo-service
+    version: 1
   # Name the native executable build/todo-service, without the version or "-runner"
   package:
     output-name: todo-service
@@ -8,3 +9,17 @@ quarkus:
       add-runner-suffix: false
   http:
    port: 80
+  log:
+    level: INFO
+    console:
+      json:
+        enabled: true
+        mdc:
+          flat-fields: true
+        additional-field:
+          app:
+            value: "${quarkus.application.name}"
+            type: string
+          version:
+            value: "${quarkus.application.version}"
+            type: string

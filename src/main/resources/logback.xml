@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <property name="APP_NAME" value="my-application" />
+  <property name="APP_VERSION" value="1" />
+  <timestamp key="START_TIME" datePattern="yyyy-MM-dd'T'HH:mm:ss.SSSZ" />
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+      <includeCallerInfo>false</includeCallerInfo>
+      <includeMdc>true</includeMdc>
+
+      <!-- Customize or rename standard JSON fields -->
+      <fieldNames>
+        <!-- Sets the JSON key for log level (default is usually "level") -->
+        <level>level</level>
+        <!-- Sets the JSON key for the logger class/name (default is "logger_name") -->
+        <logger>logger</logger>
+      </fieldNames>
+
+      <shortenedLoggerNameLength>30</shortenedLoggerNameLength>
+
+      <customFields>
+        {
+        "app": "${APP_NAME}",
+        "version": "${APP_VERSION}",
+        "startTime": "${START_TIME}"
+        }
+      </customFields>
+    </encoder>
+  </appender>
+
+  <root level="INFO">
+    <appender-ref ref="STDOUT" />
+  </root>
+
+</configuration>
