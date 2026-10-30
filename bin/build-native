@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Builds a native executable with GraalVM, for the machine's own architecture, in
-# build/todo-service-<version>-runner.
+# build/todo-service.
 #
 # Needs GraalVM's native-image (run `sdk env` to use the JDK in .sdkmanrc). Extra arguments go
 # to Gradle.

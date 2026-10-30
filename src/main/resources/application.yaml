@@ -1,0 +1,10 @@
+quarkus:
+  application:
+    name: todo-service
+  # Name the native executable build/todo-service, without the version or "-runner"
+  package:
+    output-name: todo-service
+    jar:
+      add-runner-suffix: false
+  http:
+   port: 80
