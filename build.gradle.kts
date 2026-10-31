@@ -27,7 +27,8 @@ dependencies {
   implementation("io.quarkus:quarkus-rest-jackson")
   implementation("io.quarkus:quarkus-smallrye-health")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-  implementation("io.quarkiverse.logging.logback:quarkus-logging-logback")
+  implementation("io.quarkiverse.logging.logback:quarkus-logging-logback:1.2.0")
+  implementation("net.logstash.logback:logstash-logback-encoder:9.0")
 
   testImplementation("io.quarkus:quarkus-junit5")
   testImplementation("io.rest-assured:rest-assured")
