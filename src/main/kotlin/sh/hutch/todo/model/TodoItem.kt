@@ -12,10 +12,16 @@ data class TodoItem(
   val notes: String?
 )
 
-enum class ItemStatus {
-  In_progress,
-  Blocked,
-  Done
+enum class ItemStatus(val symbol: String) {
+  In_progress("/"),
+  Blocked("!"),
+  Done("x");
+
+  companion object {
+    public fun findBySymbol(symbol: String): ItemStatus? {
+      return entries.firstOrNull { it.symbol == symbol }
+    }
+  }
 }
 
 enum class ItemPriority {

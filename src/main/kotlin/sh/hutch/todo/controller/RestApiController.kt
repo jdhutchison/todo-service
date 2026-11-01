@@ -6,7 +6,6 @@ import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import sh.hutch.todo.model.ApiResponse;
 import sh.hutch.todo.model.TodoItem;
@@ -14,7 +13,7 @@ import sh.hutch.todo.model.TodoItem;
 @Path("/items")
 public class RestApiController {
 
-  val log = LoggerFactory.getLogger("x")
+  private val log = LoggerFactory.getLogger(RestApiController::class.java)
 
   @Consumes(MediaType.APPLICATION_JSON)
   @Produces(MediaType.APPLICATION_JSON)

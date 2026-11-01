@@ -23,3 +23,8 @@ quarkus:
           version:
             value: "${quarkus.application.version}"
             type: string
+
+service:
+  api-key: test
+  todo-list:
+    path: "classpath:/resources/todolist"

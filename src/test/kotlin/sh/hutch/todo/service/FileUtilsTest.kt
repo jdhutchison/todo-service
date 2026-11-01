@@ -7,8 +7,6 @@ import kotlin.io.path.readLines
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-
-
 class FileUtilsTest {
 
   private val testTodoListDirUri = this::class.java.classLoader.getResource("test-todo-list").toURI()
